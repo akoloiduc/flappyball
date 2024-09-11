@@ -7,13 +7,13 @@ body{
     position: relative;
     height: 480px; width: 350px;
     border: 1px solid #ccc;
-    background-image: url(..//images/background.png);
+    background-image: url('../images/background.png');
     overflow: hidden;
     margin: 80px auto;
 }
 #ball{
     position: absolute;
-    background: url("../images/ball.png");
+    background: url('../images/ball.png');
     height: 42px; width: 65px;
     background-size: contain ;
     background-repeat: no-repeat;
