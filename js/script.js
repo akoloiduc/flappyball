@@ -42,11 +42,11 @@ $(function(){
             }
         },40);
     }
-    $('#container').on('mouseup touchend',function(e){
+    $('#container').mouseup(function(e){
         clearInterval(go_up);
         go_up = false;
     });
-    $('#container').('mousedown touchend',function(e){
+    $('#container').mousedown(function(e){
         go_up = setInterval(up,40);
     });
     $('#play_btn').on('click touchstart', function(){
