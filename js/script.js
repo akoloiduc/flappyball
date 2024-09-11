@@ -49,7 +49,7 @@ $(function(){
     $('#container').mousedown(function(e){
         go_up = setInterval(up,40);
     });
-    $('#play_btn').click(function(){
+    $('#play_btn').on('click touchstart', function(){
         playGame();
         $(this).hide();
     });
@@ -66,7 +66,7 @@ $(function(){
         game_over = true;
         $('#restart_btn').slideDown();
     }
-    $("#restart_btn").click(function(){
+    $("#restart_btn").on('click touchstart', function(){
         location.reload();
     });
     function collision($div1, $div2){
