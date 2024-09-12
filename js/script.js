@@ -15,6 +15,7 @@ $(function(){
     var go_up = false;
     var score_updated =false;
     var game_over = false;
+    var height_limit = 50;
     function playGame(){
         var the_game = setInterval(function(){
             if(collision(ball, pole_1)|| collision(ball, pole_2)|| 
@@ -58,8 +59,11 @@ $(function(){
         ball.css('transform', 'rotate(50deg)');
     }
     function up(){
-        ball.css('top', parseInt(ball.css('top'))-20);
-        ball.css('transform', 'rotate(-10deg)');
+        var current_top = parseInt(ball.css('top'));
+        if(current_top>height_limit){
+            ball.css('top', current_top-20);
+            ball.css('transform', 'rotate(-10deg)');
+        }
     }
     function stop_the_game(){
         clearInterval(playGame());
